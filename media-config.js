@@ -21,14 +21,14 @@ window.mediaConfig = {
     'Captura de tela 2026-09-17 195705.png'
   ],
   videos: [
-    'Publicado - IMG_1537.MP4',
-    'Publicado - IMG_1524.mp4'
+    'https://media.githubusercontent.com/media/edukadoshmda-ops/Portifolio-Rebeca/main/Publicado%20-%20IMG_1537.MP4',
+    'https://media.githubusercontent.com/media/edukadoshmda-ops/Portifolio-Rebeca/main/Publicado%20-%20IMG_1524.mp4'
   ]
 };
 
 (function applyMediaConfig() {
   const config = window.mediaConfig;
-  const encode = (fileName) => encodeURI(fileName);
+  const encode = (fileName) => /^https?:\/\//i.test(fileName) ? fileName : encodeURI(fileName);
   const setImage = (selector, fileName) => {
     const image = document.querySelector(selector);
     if (image && fileName) image.src = encode(fileName);

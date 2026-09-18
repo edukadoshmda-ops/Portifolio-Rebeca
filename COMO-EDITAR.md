@@ -5,13 +5,13 @@
 3. Troque apenas o nome do arquivo dentro de `hero`, `proof`, `gallery`, `cars` ou `videos`.
 4. Salve e atualize o site no navegador.
 
-Use o nome exato do arquivo, incluindo a extensao. Exemplo:
+Use o nome exato do arquivo, incluindo a extensao. Para videos grandes, voce tambem pode usar uma URL publica. Exemplo:
 
 ```js
 hero: 'minha-foto.jpg',
 videos: [
   'video-entrega.mp4',
-  'video-loja.mp4'
+  'https://exemplo.com/video-loja.mp4'
 ]
 ```
 
