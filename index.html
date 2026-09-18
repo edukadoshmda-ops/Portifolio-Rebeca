@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rebeca Alves, consultora de seminovos Revemar. Atendimento personalizado para encontrar seu próximo carro." />
+  <title>Rebeca Alves | Seu próximo carro está aqui</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root { --ink: #151515; --ink-soft: #20201e; --paper: #f7f4ee; --paper-dim: #c9c4b9; --champagne: #c9a66b; --champagne-soft: #ead8b8; --line: rgba(247,244,238,.18); --whatsapp: #25b86a; --max: 1180px; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--ink); color: var(--paper); font-family: "DM Sans", sans-serif; line-height: 1.6; }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    h1, h2, h3, p { margin: 0; }
+    h1, h2, h3, .brand, .eyebrow, .stat-number { font-family: "DM Serif Display", serif; font-weight: 400; }
+    .wrap { width: min(var(--max), calc(100% - 64px)); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(21,21,21,.9); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { color: var(--paper); font-size: 1.75rem; line-height: .9; text-decoration: none; letter-spacing: -.02em; }
+    .brand span { display: block; color: var(--champagne); font-family: "DM Sans", sans-serif; font-size: .57rem; font-weight: 700; letter-spacing: .18em; line-height: 2.1; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 27px; font-size: .78rem; font-weight: 600; letter-spacing: .04em; }
+    .nav-links a { color: var(--paper-dim); text-decoration: none; transition: color .25s ease; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--champagne-soft); }
+    .nav-cta { padding: 11px 18px; border: 1px solid var(--champagne); color: var(--champagne-soft) !important; border-radius: 2px; }
+    .hero { min-height: 720px; overflow: hidden; position: relative; display: grid; align-items: end; background: var(--ink); }
+    .hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(21,21,21,.86) 0%, rgba(21,21,21,.58) 35%, rgba(21,21,21,.06) 76%), linear-gradient(0deg, rgba(21,21,21,.42), transparent 48%); }
+    .hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 26%; opacity: .94; filter: brightness(1.08) saturate(1.04); }
+    .hero-content { position: relative; z-index: 2; padding: 120px 0 104px; }
+    .eyebrow { color: var(--champagne); font-family: "DM Sans", sans-serif; font-size: .7rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    h1 { max-width: 690px; margin-top: 21px; font-size: clamp(4rem, 8vw, 7.2rem); line-height: .91; letter-spacing: -.045em; }
+    h1 em { color: var(--champagne-soft); font-style: italic; }
+    .hero-copy { max-width: 450px; margin-top: 28px; color: var(--paper-dim); font-size: 1rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 35px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 21px; border: 1px solid transparent; border-radius: 2px; font-size: .82rem; font-weight: 700; letter-spacing: .02em; text-decoration: none; transition: transform .25s ease, background .25s ease, color .25s ease; }
+    .button:hover, .button:focus-visible { transform: translateY(-3px); }
+    .button-primary { background: var(--champagne); color: var(--ink); }
+    .button-secondary { border-color: var(--line); color: var(--paper); }
+    .button-secondary:hover, .button-secondary:focus-visible { background: var(--paper); color: var(--ink); }
+    .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #1b1b1a; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat { padding: 31px 22px; border-right: 1px solid var(--line); }
+    .stat:last-child { border-right: 0; }
+    .stat-number { color: var(--champagne-soft); font-size: 2.35rem; line-height: 1; }
+    .stat-label { max-width: 140px; margin-top: 8px; color: var(--paper-dim); font-size: .72rem; }
+    section { padding: 118px 0; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 50px; }
+    h2 { max-width: 570px; font-size: clamp(3.3rem, 6vw, 5.8rem); line-height: .92; letter-spacing: -.045em; }
+    .section-heading > p { max-width: 360px; color: var(--paper-dim); font-size: .9rem; }
+    .proof { background: var(--paper); color: var(--ink); }
+    .proof .eyebrow, .videos .eyebrow { color: #96723b; }
+    .proof-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: center; }
+    .proof-photo { position: relative; min-height: 490px; overflow: hidden; }
+    .proof-photo img { width: 100%; height: 100%; min-height: 490px; object-fit: cover; object-position: center 38%; }
+    .photo-tag { position: absolute; bottom: 20px; left: 20px; padding: 9px 13px; background: var(--champagne-soft); color: var(--ink); font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .proof-copy p { max-width: 440px; margin-top: 25px; color: #5f5b53; }
+    .proof-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 20px; margin-top: 40px; padding-top: 27px; border-top: 1px solid #d6d0c4; }
+    .proof-list strong { display: block; font-family: "DM Serif Display", serif; font-size: 1.4rem; font-weight: 400; }
+    .proof-list span { display: block; margin-top: 3px; color: #777169; font-size: .73rem; }
+    .deliveries { background: var(--ink-soft); }
+    .gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 15px; }
+    .gallery figure { margin: 0; overflow: hidden; background: #111; }
+    .gallery figure:nth-child(1) { grid-column: span 5; }
+    .gallery figure:nth-child(2) { grid-column: span 7; }
+    .gallery figure:nth-child(3), .gallery figure:nth-child(4), .gallery figure:nth-child(5) { grid-column: span 4; }
+    .gallery img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; background: #111; transition: transform .55s ease; }
+    .gallery figure:nth-child(n+3) img { height: auto; }
+    .gallery figure:hover img { transform: scale(1.045); }
+    .gallery figcaption { padding: 14px 16px; color: var(--paper-dim); font-size: .73rem; }
+    .videos { background: var(--paper); color: var(--ink); }
+    .video-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .video-card { grid-column: span 4; overflow: hidden; background: var(--ink); color: var(--paper); }
+    .video-card:first-child { grid-column: span 6; }
+    .video-card video { display: block; width: 100%; height: auto; aspect-ratio: auto; background: #0e0e0e; object-fit: contain; }
+    .video-card h3 { padding: 18px 19px 3px; font-size: 1.35rem; line-height: 1; }
+    .video-card p { padding: 0 19px 22px; color: var(--paper-dim); font-size: .98rem; line-height: 1.55; }
+    .inventory { background: var(--ink); }
+    .inventory-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+    .car { background: var(--ink-soft); border: 1px solid var(--line); }
+    .car-image { overflow: hidden; background: #0d0d0d; }
+    .car-image img { width: 100%; aspect-ratio: auto; object-fit: contain; background: #0d0d0d; transition: transform .5s ease; }
+    .car:hover .car-image img { transform: scale(1.025); }
+    .car-details { display: flex; align-items: end; justify-content: space-between; gap: 20px; padding: 22px 22px 24px; }
+    .car h3 { font-size: 1.75rem; line-height: 1; }
+    .car-meta { margin-top: 9px; color: var(--paper-dim); font-size: .72rem; }
+    .car-price { color: var(--champagne-soft); font-family: "DM Serif Display", serif; font-size: 1.55rem; white-space: nowrap; }
+    .car-button { display: inline-flex; gap: 8px; margin-top: 17px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 2px; color: var(--paper); font-size: .72rem; font-weight: 700; text-decoration: none; }
+    .car-button:hover, .car-button:focus-visible { border-color: var(--champagne); color: var(--champagne-soft); }
+    footer { padding: 65px 0 34px; border-top: 1px solid var(--line); background: #101010; }
+    .footer-row { display: flex; align-items: start; justify-content: space-between; gap: 24px; }
+    .footer-title { font-family: "DM Serif Display", serif; font-size: 2.6rem; line-height: 1; }
+    .footer-copy { max-width: 330px; color: var(--paper-dim); font-size: .8rem; }
+    .footer-copy a { color: var(--champagne-soft); text-decoration: none; }
+    .copyright { margin-top: 62px; color: #77736b; font-size: .68rem; }
+    .float-wpp { position: fixed; right: 25px; bottom: 24px; z-index: 20; display: grid; width: 56px; height: 56px; place-items: center; border-radius: 50%; background: var(--whatsapp); color: white; font-size: 1.55rem; box-shadow: 0 12px 28px rgba(0,0,0,.35); text-decoration: none; transition: transform .2s ease; }
+    .float-wpp:hover, .float-wpp:focus-visible { transform: scale(1.08); }
+    :focus-visible { outline: 2px solid var(--champagne-soft); outline-offset: 4px; }
+    @media (max-width: 760px) {
+      .wrap { width: min(var(--max), calc(100% - 36px)); }
+      .nav { min-height: 70px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .nav-cta { padding: 9px 12px; font-size: .7rem; }
+      .hero { min-height: 720px; }
+      .hero::before { background: linear-gradient(180deg, rgba(21,21,21,.08), rgba(21,21,21,.84) 86%); }
+      .hero-image { height: 64%; object-position: center 27%; }
+      .hero-content { padding: 60px 0 58px; }
+      h1 { font-size: clamp(3.8rem, 18vw, 6rem); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .section-heading, .footer-row { display: block; }
+      .section-heading > p { margin-top: 20px; }
+      section { padding: 82px 0; }
+      .proof-grid { grid-template-columns: 1fr; gap: 36px; }
+      .proof-photo, .proof-photo img { min-height: 390px; }
+      .gallery { gap: 10px; }
+      .gallery figure:nth-child(1), .gallery figure:nth-child(2) { grid-column: span 6; }
+      .gallery figure:nth-child(n+3) { grid-column: span 4; }
+      .gallery img, .gallery figure:nth-child(n+3) img { height: auto; }
+      .gallery figcaption { min-height: 53px; padding: 10px; font-size: .68rem; }
+      .video-grid { grid-template-columns: 1fr; }
+      .video-card, .video-card:first-child { grid-column: auto; }
+      .inventory-grid { grid-template-columns: 1fr; }
+      .car-details { display: block; }
+      .car-price { margin-top: 18px; }
+      .car-button { display: inline-flex; }
+      .footer-copy { margin-top: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- THESIS: confiança que vira chave na mão, sem o catálogo genérico de concessionária. OWN-WORLD: grafite, amarelo-lima, tipografia condensada e fotos reais de entrega. STORY: a pessoa entende a consultoria, vê prova e chama Rebeca. FIRST VIEWPORT: rosto, entrega e CTA em uma composição editorial. FORM: portfólio de experiência com vitrine de oportunidades. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio">Rebeca Alves<span>Consultora Revemar</span></a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#entregas">Entregas</a>
+        <a href="#videos">Vídeos</a>
+        <a href="#estoque">Estoque</a>
+        <a class="nav-cta" href="https://wa.me/5591993402873?text=Ol%C3%A1%20Rebeca,%20vi%20seu%20site%20e%20quero%20encontrar%20meu%20pr%C3%B3ximo%20carro!" target="_blank" rel="noreferrer">Falar com Rebeca</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <img class="hero-image" src="Gemini_Generated_Image_hxyloohxyloohxyl.jpg" alt="Rebeca ao lado de um veículo na Revemar Seminovos" />
+      <div class="wrap hero-content">
+        <p class="eyebrow">Seminovos Revemar · Belém e região</p>
+        <h1>Seu próximo carro está <em>aqui.</em></h1>
+        <p class="hero-copy">Atendimento direto, escolha inteligente e segurança em cada detalhe. Eu acompanho você da primeira conversa até a entrega.</p>
+        <div class="actions">
+          <a class="button button-primary" href="https://wa.me/5591993402873?text=Ol%C3%A1%20Rebeca,%20quero%20consultar%20os%20seminovos%20dispon%C3%ADveis!" target="_blank" rel="noreferrer"><i class="fa-brands fa-whatsapp"></i> Encontrar meu carro</a>
+          <a class="button button-secondary" href="#estoque">Ver oportunidades</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Números da consultoria">
+      <div class="wrap stats-grid">
+        <div class="stat"><div class="stat-number">+3 anos</div><div class="stat-label">de experiência no mercado</div></div>
+        <div class="stat"><div class="stat-number">+300</div><div class="stat-label">carros vendidos e entregues</div></div>
+        <div class="stat"><div class="stat-number">100%</div><div class="stat-label">laudo cautelar aprovado</div></div>
+        <div class="stat"><div class="stat-number">Revemar</div><div class="stat-label">qualidade, procedência e confiança</div></div>
+      </div>
+    </section>
+
+    <section class="proof" id="sobre">
+      <div class="wrap proof-grid">
+        <div class="proof-photo"><img src="Gemini_Generated_Image_88usm488usm488us.jpg" alt="Rebeca entregando a chave de um seminovo a um casal" /><span class="photo-tag">A escolha certa muda tudo</span></div>
+        <div class="proof-copy">
+          <p class="eyebrow">Comprar pode ser leve</p>
+          <h2>Uma consultoria que olha para você.</h2>
+          <p>Você não precisa entender de carro para fazer uma boa compra. Eu traduzo as opções, explico cada etapa e encontro um seminovo que combina com sua rotina e seu momento.</p>
+          <div class="proof-list">
+            <div><strong>Revisados</strong><span>inspeção antes da entrega</span></div>
+            <div><strong>Garantia</strong><span>tranquilidade depois da compra</span></div>
+            <div><strong>Procedência</strong><span>histórico e laudo conferidos</span></div>
+            <div><strong>Presença</strong><span>atendimento de ponta a ponta</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="deliveries" id="entregas">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">Histórias que ficam</p><h2>Sonhos realizados.</h2></div><p>Cada entrega começa com uma conversa honesta e termina com uma nova história na estrada.</p></div>
+        <div class="gallery">
+          <figure><img src="Gemini_Generated_Image_88usm488usm488us%20(1).jpg" alt="Família recebendo carro novo na Revemar" /><figcaption>Um novo capítulo para a família.</figcaption></figure>
+          <figure><img src="Gemini_Generated_Image_88usm488usm488us%20(2).jpg" alt="Família recebendo carro com laço vermelho" /><figcaption>Chave na mão, sorriso no rosto.</figcaption></figure>
+          <figure><img src="Gemini_Generated_Image_jer8asjer8asjer8.jpg" alt="Cliente recebendo seu carro seminovo" /><figcaption>Escolha segura para seguir em frente.</figcaption></figure>
+          <figure><img src="Gemini_Generated_Image_p3w1tup3w1tup3w1.jpg" alt="Família com carro novo na loja" /><figcaption>O carro certo para cada fase.</figcaption></figure>
+          <figure><img src="Gemini_Generated_Image_hxyloohxyloohxyl.jpg" alt="Rebeca apresentando um veículo seminovo" /><figcaption>Confiança que vira memória.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="videos" id="videos">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">Por dentro da Revemar</p><h2>Veja em movimento.</h2></div><p>Conheça a loja, os carros e alguns momentos que tornam cada entrega especial.</p></div>
+        <div class="video-grid">
+          <article class="video-card"><video controls preload="metadata" playsinline><source src="Publicado%20-%20IMG_1537.MP4" type="video/mp4" />Seu navegador não consegue reproduzir este vídeo.</video><h3>Momentos de entrega</h3><p>Mais uma família começando uma nova história.</p></article>
+          <article class="video-card"><video controls preload="metadata" playsinline><source src="Publicado%20-%20IMG_1524.mp4" type="video/mp4" />Seu navegador não consegue reproduzir este vídeo.</video><h3>Revemar Seminovos</h3><p>Escolha seu próximo seminovo com confiança: carros revisados, procedência garantida e atendimento personalizado para transformar seu desejo em uma conquista segura, elegante e inesquecível até a entrega das chaves hoje. Conte com orientação transparente, condições especiais e experiência exclusiva para encontrar o veículo ideal para sua rotina e novos planos.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="inventory" id="estoque">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">Seleção da semana</p><h2>Oportunidades em destaque.</h2></div><p>Modelos selecionados para você consultar agora. Disponibilidade sujeita a alteração.</p></div>
+        <div class="inventory-grid">
+          <article class="car"><div class="car-image"><img src="Captura%20de%20tela%202026-09-17%20195516.png" alt="Nissan Kicks 1.6 Exclusive" /></div><div class="car-details"><div><h3>Nissan Kicks 1.6</h3><p class="car-meta">2024/2024 · 10.332 km · automático · flex</p><a class="car-button" href="https://wa.me/5591993402873?text=Ol%C3%A1%20Rebeca,%20tenho%20interesse%20no%20Nissan%20Kicks%202024!" target="_blank" rel="noreferrer">Quero detalhes <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div><div class="car-price">R$ 115.490</div></div></article>
+          <article class="car"><div class="car-image"><img src="Captura%20de%20tela%202026-09-17%20195601.png" alt="Nissan Frontier LE 4x4" /></div><div class="car-details"><div><h3>Nissan Frontier 2.3</h3><p class="car-meta">2018/2018 · 68.758 km · automático · diesel</p><a class="car-button" href="https://wa.me/5591993402873?text=Ol%C3%A1%20Rebeca,%20tenho%20interesse%20na%20Nissan%20Frontier!" target="_blank" rel="noreferrer">Quero detalhes <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div><div class="car-price">R$ 127.490</div></div></article>
+          <article class="car"><div class="car-image"><img src="Captura%20de%20tela%202026-09-17%20195631.png" alt="Hyundai Creta N Line" /></div><div class="car-details"><div><h3>Hyundai Creta 1.0</h3><p class="car-meta">2023/2024 · 24.202 km · automático · flex</p><a class="car-button" href="https://wa.me/5591993402873?text=Ol%C3%A1%20Rebeca,%20tenho%20interesse%20no%20Hyundai%20Creta!" target="_blank" rel="noreferrer">Quero detalhes <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div><div class="car-price">R$ 135.990</div></div></article>
+          <article class="car"><div class="car-image"><img src="Captura%20de%20tela%202026-09-17%20195705.png" alt="Nissan Versa Exclusive" /></div><div class="car-details"><div><h3>Nissan Versa 1.6</h3><p class="car-meta">2025/2026 · 10.452 km · automático · flex</p><a class="car-button" href="https://wa.me/5591993402873?text=Ol%C3%A1%20Rebeca,%20tenho%20interesse%20no%20Nissan%20Versa!" target="_blank" rel="noreferrer">Quero detalhes <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div><div class="car-price">R$ 121.490</div></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap"><div class="footer-row"><div class="footer-title">Vamos encontrar<br /><span style="color: var(--signal)">o seu seminovo.</span></div><p class="footer-copy">Rebeca Alves Amancio<br />Consultora de Seminovos Revemar<br /><br /><a href="https://wa.me/5591993402873" target="_blank" rel="noreferrer">(91) 99340-2873 · WhatsApp</a></p></div><p class="copyright">© 2026 Rebeca Alves Amancio · Fotos reais de entregas e veículos Revemar Seminovos.</p></div>
+  </footer>
+  <a class="float-wpp" href="https://wa.me/5591993402873?text=Ol%C3%A1%20Rebeca,%20vi%20seu%20site%20e%20gostaria%20de%20atendimento!" target="_blank" rel="noreferrer" aria-label="Falar com Rebeca pelo WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <script src="media-config.js"></script>
+</body>
+</html>
